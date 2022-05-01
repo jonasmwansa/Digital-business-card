@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
+import MainComponent from './components/MainComponent';
+import Button from './components/Button';
+import Footer from './components/Footer';
+import HeaderComponent from './components/HeaderComponent';
+import Interest from './components/Interest';
+import gmail_logo from './images/Gmail-logo.png';
+import linkedin_logo from './images/LinkedIn_Logo.png';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+        <HeaderComponent />
+        <MainComponent name='Jonas Mwansa' title='Full Stack Developer' />
+          <div className='buttons'>
+            <Button link='mailto:jonasmwansa7@gmail.com' title='email' logo={gmail_logo} description='email me' />
+            <Button link='https://www.linkedin.com/in/jonas-mwansa-787259155/' title='linkedin' logo={linkedin_logo} description='add me on linkedin' />  
+          </div>
+        <div className='main-content'>
+            <About />
+            <Interest />
+        </div>
+        <Footer />
     </div>
   );
 }
